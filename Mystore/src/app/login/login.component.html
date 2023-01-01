@@ -1,0 +1,40 @@
+<!-- <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <p>Currently signing in as: {{ firstname }}</p>
+    <input type="text" name="firstname" required minlength="2" appForbiddenName="firstname" [(ngModel)]="firstname" class="form-control">
+
+    <input type="password" name="password" required minlength="1" [(ngModel)]="password" class="form-control">
+    <button type="submit" [disabled]="form.invalid">Sign in</button>
+  </form>
+
+   -->
+
+   <div ng-app="myApp" ng-controller="myController" class="container">
+    <form name="myForm" #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="login-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Firstname</label>
+              <input type="text" name="firstname" required minlength="2" appForbiddenName="firstname" [(ngModel)]="firstname" class="form-control">
+              <!-- <div ng-show="myForm.email.$error.email" class="error">Invalid firstname!</div>
+              <div ng-show="myForm.email.$error.required &amp;&amp; myForm.email.$touched" class="error">Required!</div> -->
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" required minlength="1" [(ngModel)]="password" class="form-control">
+              <!-- <div ng-show="myForm.pass.$error.required &amp;&amp; myForm.pass.$touched" class="error">Required!</div> -->
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <button ng-click="authenticate()" ng-disabled="myForm.$invalid" class="btn btn-success pull-right">Login</button>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </form>
+  </div>

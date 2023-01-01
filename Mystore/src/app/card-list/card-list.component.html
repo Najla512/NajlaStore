@@ -1,0 +1,27 @@
+<!-- <p>card works!</p>
+<div class="card-img-top">
+    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+      <img    src="{{image}}" class="img-fluid"/>
+      <a href="#!"  routerLink="/proudect-details/{{id}}">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{price}}</p>
+      <button href="#!" (click)="addToCart()" class="btn btn-primary">Add to cart</button>
+    </div>
+  </div> -->
+
+  <div class="container text-dark bg-white mt-5 pb-2 mb-3">
+    <div class="row p-4 bg-mobile">
+      <div class="col-md-6">
+        <h2 class="text-success">Cart Details</h2>
+      </div>
+      <div class="col-md-6 ">
+        <button type="button"   (click)="checkout()" class="btn btn-custom pull-right">checkout</button>
+      </div>
+    </div>
+    <app-card *ngFor="let p of cart" [card]="p"></app-card>
+
+  </div>

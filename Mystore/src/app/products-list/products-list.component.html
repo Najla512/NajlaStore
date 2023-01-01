@@ -1,0 +1,28 @@
+<!-- <h1>Proudcts List</h1>
+<div lass="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+
+    <app-proudct-item *ngFor="let p of proudct" [product]="p"></app-proudct-item>
+        
+  
+</div>
+</div> -->
+
+
+<div class="app">
+    <div class="container mb-5 mt-5">
+        <h1 class="text-center mt-4 mb-4">Welcome To MyStore</h1>
+        <div class="col-md-6 ">
+            <button type="button"   (click)="MyCard()" class="btn btn-custom pull-right">MyCard</button>
+          </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mt-3">
+                    <div class="product-1 align-items-center p-2 text-center">
+                        <app-proudct-item *ngFor="let p of proudct" [product]="p"></app-proudct-item>
+                       
+                </div>
+            </div>
+         
+    </div>
+    </div>

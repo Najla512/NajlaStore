@@ -1,0 +1,26 @@
+
+<!-- 
+<div class="card-img-top">
+    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+      <img   (click)="OpenDetails(product.id)" src="{{product.image}}" class="img-fluid"/>
+      <a href="#!"  routerLink="/proudect-details/{{product.id}}">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.price}}</p>
+      <button href="#!" (click)="OpenDetails(product.id)" class="btn btn-primary">show Details</button>
+    </div>
+  </div> -->
+
+
+  <div class="mt-3 info">
+  <div class="image-container"> <img class="xyz rounded"  (click)="OpenDetails(product.id)" crossorigin="anonymous" src="{{product.image}}" width="200"></div>
+  <h5>{{product.name}}</h5>
+  
+  <div class=" cost mt-3 text-dark"> <span>${{product.price}}</span>
+      <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+  </div>
+</div>
+<div class="p-3 bg-dark text-center text-white mt-3 cursor cart"> <span (click)="OpenDetails(product.id)" class="text-uppercase cart-text">show Details</span> </div>
