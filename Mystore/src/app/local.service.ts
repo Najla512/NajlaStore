@@ -54,12 +54,13 @@ alert('4')
 
       cartItems.push(newCartItem)
   alert(cartItems);
+  
 
-    this.storage.set(this.STORAGE_KEY, cartItems)
+    this.storage.set(this.STORAGE_KEY,JSON.stringify(cartItems))
   }
 
   public  getData(): Cart []{
-   // return    this.storage.get(this.STORAGE_KEY)
+   //    this.storage.get(this.STORAGE_KEY)
    return this.Mycart;
   }
   public removeData(key: string) {

@@ -8,9 +8,9 @@ import { CardComponent } from './card/card.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [ 
-{ path: '', component: LoginComponent},
+//{ path: '', component: LoginComponent},
 //{ path: 'login', component: LoginComponent },
-{ path: 'products', component: ProductsListComponent },
+{ path: '', component: ProductsListComponent },
 { path: 'proudct/:id', component: ProductDetailsComponent},
 { path: 'Mycard', component: CardComponent},
 { path: 'Checkout', component: CheckoutComponent}
