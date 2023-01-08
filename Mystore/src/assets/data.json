@@ -3,42 +3,42 @@
     {
         "id":1,
     "name":"BlueCups",
-    "price":"55",
+    "price":55,
     "image":"https://secure.img1-cg.wfcdn.com/im/25310702/resize-h600-w600%5Ecompr-r85/3044/30445889/Mugs+%26+Cups.jpg"
 
     },
     {
         "id":2,
     "name":"CeramicsCups",
-    "price":"65",
+    "price":65,
     "image":"https://cdn.shopify.com/s/files/1/0160/1822/products/dale-harris_square_1024_00037_600x.jpg?v=1668815779"
 
     },
     {
         "id":3,
     "name":"HUSKEE",
-    "price":"80",
+    "price":80,
     "image":"https://cdn.shopify.com/s/files/1/0627/1159/5226/products/55425730_011_b10_3_1_81103808-a2bc-4f58-9937-b46516d7e939_1445x.jpg?v=1645049383"
 
     },
     {
         "id":1,
     "name":"BlueCups",
-    "price":"55",
+    "price":55,
     "image":"https://secure.img1-cg.wfcdn.com/im/25310702/resize-h600-w600%5Ecompr-r85/3044/30445889/Mugs+%26+Cups.jpg"
 
     },
     {
         "id":2,
     "name":"CeramicsCups",
-    "price":"65",
+    "price":65,
     "image":"https://cdn.shopify.com/s/files/1/0160/1822/products/dale-harris_square_1024_00037_600x.jpg?v=1668815779"
 
     },
     {
         "id":3,
     "name":"HUSKEE",
-    "price":"80",
+    "price":80,
     "image":"https://cdn.shopify.com/s/files/1/0627/1159/5226/products/55425730_011_b10_3_1_81103808-a2bc-4f58-9937-b46516d7e939_1445x.jpg?v=1645049383"
 
     }

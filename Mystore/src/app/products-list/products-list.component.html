@@ -15,12 +15,13 @@
         <div class="col-md-6 ">
             <button type="button"   (click)="MyCard()" class="btn btn-custom pull-right">MyCard</button>
           </div>
+    
         <div class="row">
             <div class="col-md-4">
                 <div class="card mt-3">
                     <div class="product-1 align-items-center p-2 text-center">
                         <app-proudct-item *ngFor="let p of proudct" [product]="p"></app-proudct-item>
-                       
+           
                 </div>
             </div>
          

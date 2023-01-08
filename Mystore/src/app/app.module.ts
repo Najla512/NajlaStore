@@ -36,10 +36,10 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
+  
     
   ],
-  providers: [  { provide: LocalService, useValue: '',multi: true } ,ProudtslistService,UsersService,ProductsService],
+  providers: [  { provide:LocalService ,useValue: '',multi: true},ProudtslistService,UsersService,ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

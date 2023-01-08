@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,Injectable,Input,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import {product}from '../models/product';
@@ -11,7 +11,9 @@ import { LocalService } from '../local.service';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })
-
+@Injectable({
+  providedIn: 'root'
+})
 export class CardListComponent {
   
   

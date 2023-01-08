@@ -2,6 +2,7 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import {product}from './models/product';
 import {Cart}from './models/Cart';
 import { SESSION_STORAGE, StorageService } from 'ngx-webstorage-service';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ import { SESSION_STORAGE, StorageService } from 'ngx-webstorage-service';
 export class LocalService {
 private Mycart:Cart[]=[];
  STORAGE_KEY = 'pure-awesomeness';
-
+ private product$ = new BehaviorSubject<any>({});
+ selectedProduct$ = this.product$.asObservable();
 constructor(@Inject(SESSION_STORAGE) private storage: StorageService) { 
 
   if ( this.storage.has(this.STORAGE_KEY) ) {
@@ -17,12 +19,16 @@ constructor(@Inject(SESSION_STORAGE) private storage: StorageService) {
   }
 }
 
-public saveData (p: product) {
+ saveData (p:any){
+  this.product$.next(p);
+
 alert('4')
+alert(p)
+
 //   this.Mycart=this.getData();
 
-//     const newCItem = new Cart
-//     newCItem.p = p
+    // const newCItem = new Cart
+    // newCItem.p = p
 
 
 //     this.Mycart.push(newCItem)
@@ -35,28 +41,28 @@ alert('4')
 //     console.log('5')
   
 
-    const productId = p.id
-    const cartItems = this.getData()
+    // const productId = p.id
+    // const cartItems = this.getData()
 
-    // check if product is already in cart
-    let productInCart
-    for (let index = 0; index < cartItems.length; index++) {
-      const cartItem = cartItems[index];
-      if (cartItem.p.id === productId) {
-        productInCart = cartItem
-      }
-    }
+  //   // check if product is already in cart
+  //   let productInCart
+  //   for (let index = 0; index < cartItems.length; index++) {
+  //     const cartItem = cartItems[index];
+  //     if (cartItem.p.id === productId) {
+  //       productInCart = cartItem
+  //     }
+  //   }
 
     
-      // else, add a new cart item
-      const newCartItem = new Cart
-      newCartItem.p = p
+  //     // else, add a new cart item
+  //     const newCartItem = new Cart
+  //     newCartItem.p = p
 
-      cartItems.push(newCartItem)
-  alert(cartItems);
+  //     cartItems.push(newCartItem)
+  // alert(cartItems);
   
-
-    this.storage.set(this.STORAGE_KEY,JSON.stringify(cartItems))
+  // localStorage.setItem("Cart", JSON.stringify(cartItems));
+   // this.storage.set(this.STORAGE_KEY,JSON.stringify(cartItems))
   }
 
   public  getData(): Cart []{
